@@ -6,6 +6,10 @@ x <- table(productos_excel$...7)
 x
 y <- table(productos_excel$...8)
 y
+d <- table(productos_excel$...6)
+d
+f <- table(productos_excel$...9)
+f
 color= c("pink","lightyellow","lightgreen","red","blue","lightblue","yellow","violet","orange","purple","turquoise","cyan","tan","aquamarine","green","magenta","beige","chartreuse","bisque")
 #ajustar los márgenes de la trama
 #par(mar = c(1, 1, 1, 1))
@@ -19,4 +23,9 @@ ggplot(productos_excel,aes(x=...7)) + geom_bar(fill=color) + labs(title = "Produ
 ##HACER UN HISTOGRAMA USANDO LA VARIBLE CUT, HACER UNA HSITOGRAMA USANDO LA VARIBLE CUT Y COLOR
 hist(x, col=color, main = "Histograma rango de 0 a 2",xlab = "Unidades en pedido", labels=T,ylim =c(0,2) )
 hist(y,col=color, main = "Histograma con cortes/intervalos", xlab = "Unidades en existencia", labels = T, ylim = c(0,20),breaks = 20, xaxp=c(0,25,20))
+<<<<<<< HEAD
+hist(d,col=color, main = "Histograma variable precio unidad", xlab = "Precio Unidad", labels = T, ylim = c(0,20),breaks = 20, xaxp=c(0,25,20))
+hist(f, col=color, main = "Histograma variable Nivel nuevo pedido",xlab = "Nivel nuevo pedido", labels=T,ylim =c(0,2) )
+=======
 ggplot(data = diamonds) + geom_histogram(mapping = aes(x=carat),binwidth = 0.5)
+>>>>>>> daee3eba81bf496b3b8aeba4973bf48daf52fb0e
